@@ -272,7 +272,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `created_at`, `updated_at`, `name`, `value`) VALUES
-(1, '2018-07-06 12:23:51', '2018-07-08 12:54:30', 'order_email', 'sheekanov@gmail.com');
+(1, '2018-07-06 12:23:51', '2018-07-08 12:54:30', 'order_email', 'testtest-20@mail.ru');
 
 -- --------------------------------------------------------
 

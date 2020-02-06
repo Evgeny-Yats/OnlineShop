@@ -11932,3 +11932,613 @@ ewOrder))
 #46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #47 {main}
 "} 
+[2020-02-06 12:19:07] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 21sm1010257ljv.19 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 21sm1010257ljv.19 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:19:15] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials u7sm956443lfn.31 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials u7sm956443lfn.31 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:19:22] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials l12sm1004279lji.52 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials l12sm1004279lji.52 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:19:29] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r10sm1199258ljk.9 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r10sm1199258ljk.9 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:19:36] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r2sm959682lfn.13 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r2sm959682lfn.13 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:19:44] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b190sm962615lfd.39 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b190sm962615lfd.39 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:19:51] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 14sm947198lfz.47 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 14sm947198lfz.47 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:19:58] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials k1sm1015171lji.43 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials k1sm1015171lji.43 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:20:06] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z3sm985102ljh.83 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials z3sm985102ljh.83 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
+[2020-02-06 12:20:13] local.ERROR: Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a28sm943975lfg.86 - gsmtp
+" {"exception":"[object] (Swift_TransportException(code: 535): Expected response code 250 but got code \"535\", with message \"535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a28sm943975lfg.86 - gsmtp
+\" at D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php:419)
+[stacktrace]
+#0 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(317): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
+#1 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(272): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+', Array, Array)
+#2 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\Auth\\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+', Array)
+#3 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\Esmtp\\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'pisiposle2@gmai...', '199926560qwe')
+#4 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Transport\\AbstractSmtpTransport.php(131): Swift_Transport_EsmtpTransport->doHeloCommand()
+#6 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\swiftmailer\\swiftmailer\\lib\\classes\\Swift\\Mailer.php(67): Swift_Transport_AbstractSmtpTransport->start()
+#7 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(464): Swift_Mailer->send(Object(Swift_Message), Array)
+#8 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(248): Illuminate\\Mail\\Mailer->sendSwiftMessage(Object(Swift_Message))
+#9 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(148): Illuminate\\Mail\\Mailer->send('mail.newOrder', Array, Object(Closure))
+#10 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php(18): Illuminate\\Mail\\Mailable->Illuminate\\Mail\\{closure}()
+#11 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailable.php(149): Illuminate\\Mail\\Mailable->withLocale(NULL, Object(Illuminate\\Translation\\Translator), Object(Closure))
+#12 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(263): Illuminate\\Mail\\Mailable->send(Object(Illuminate\\Mail\\Mailer))
+#13 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\Mailer.php(218): Illuminate\\Mail\\Mailer->sendMailable(Object(App\\Mail\
+ewOrder))
+#14 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Mail\\PendingMail.php(119): Illuminate\\Mail\\Mailer->send(Object(App\\Mail\
+ewOrder))
+#15 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\app\\Listeners\\OrderPostedListener.php(36): Illuminate\\Mail\\PendingMail->send(Object(App\\Mail\
+ewOrder))
+#16 [internal function]: App\\Listeners\\OrderPostedListener->handle(Object(App\\Events\\OrderPostedEvent))
+#17 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Events\\CallQueuedListener.php(86): call_user_func_array(Array, Array)
+#18 [internal function]: Illuminate\\Events\\CallQueuedListener->handle(Object(Illuminate\\Foundation\\Application))
+#19 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#20 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(94): Illuminate\\Container\\Container->call(Array)
+#24 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Bus\\Dispatcher->Illuminate\\Bus\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#25 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Events\\CallQueuedListener))
+#26 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Bus\\Dispatcher.php(98): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\CallQueuedHandler.php(49): Illuminate\\Bus\\Dispatcher->dispatchNow(Object(Illuminate\\Events\\CallQueuedListener), false)
+#28 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Jobs\\Job.php(83): Illuminate\\Queue\\CallQueuedHandler->call(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Array)
+#29 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(322): Illuminate\\Queue\\Jobs\\Job->fire()
+#30 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(272): Illuminate\\Queue\\Worker->process('database', Object(Illuminate\\Queue\\Jobs\\DatabaseJob), Object(Illuminate\\Queue\\WorkerOptions))
+#31 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Worker.php(118): Illuminate\\Queue\\Worker->runJob(Object(Illuminate\\Queue\\Jobs\\DatabaseJob), 'database', Object(Illuminate\\Queue\\WorkerOptions))
+#32 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(101): Illuminate\\Queue\\Worker->daemon('database', 'default', Object(Illuminate\\Queue\\WorkerOptions))
+#33 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Queue\\Console\\WorkCommand.php(85): Illuminate\\Queue\\Console\\WorkCommand->runWorker('database', 'default')
+#34 [internal function]: Illuminate\\Queue\\Console\\WorkCommand->handle()
+#35 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#36 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#37 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#38 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#39 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#40 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#41 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#42 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Queue\\Console\\WorkCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#46 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 D:\\Distr\\OpenServer\\OSPanel\\domains\\OnlineStore\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 {main}
+"} 
